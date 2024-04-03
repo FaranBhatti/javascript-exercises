@@ -1,5 +1,6 @@
 const repeatString = function(stringToRepeat, repeatAmount) {
     
+    // Case 1: User inputs negative amount to repeat string for
     if (repeatAmount < 0)
     {
         return 'ERROR';
