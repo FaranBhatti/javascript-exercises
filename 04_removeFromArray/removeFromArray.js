@@ -1,15 +1,6 @@
 const removeFromArray = function(array, ...args) 
 {
-    const filteredArray = [];
-
-    array.forEach((item) => {
-        if (!args.includes(item))
-        {
-            filteredArray.push(item);
-        }
-    });
-
-    return filteredArray;
+    return array.filter( (element) => (!args.includes(element)));
 };
 
 // Do not edit below this line
