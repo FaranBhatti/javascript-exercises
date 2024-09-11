@@ -1,13 +1,6 @@
-const removeFromArray = function(array, elementToRemove) {
+const removeFromArray = function(array, ...args) {
 
-    const index = array.indexOf(elementToRemove);
-
-    if (index > -1) {
-        
-        array.splice(index, 1);
-    }
-
-    return array;
+    return array.filter(x => !args.includes(x));
 };
 
 // Do not edit below this line
