@@ -1,27 +1,22 @@
-const sumAll = function(num1, num2) {
+const sumAll = function(min, max) {
     
-    let sum = 0;
-
-    if (num1 > num2) {
-        sum = num2;
-        num2 = num1;
-        num1 = sum;
-        sum = 0;
+    if (min > max) {
+        let temp = 0;
+        temp = max;
+        max = min;
+        min = temp;
     }
 
-    if ((num1 || num2) < -1) {
+    if ((min < 0) || (max < 0)) {
         return 'ERROR'
     }
 
-    if (!(num1 === Math.floor(num1))) {
-        return 'ERROR'
-    }
-
-    if (!(num2 === Math.floor(num2))) {
+    if ((!Number.isInteger(min)) || (!Number.isInteger(max))) {
         return 'ERROR'
     }
     
-    for (let i = num1; i <= num2; i++) {
+    let sum = 0;
+    for (let i = min; i <= max; i++) {
         sum += i;
     }
 
