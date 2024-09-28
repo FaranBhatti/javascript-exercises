@@ -7,21 +7,15 @@ const subtract = function(a, b) {
 };
 
 const sum = function(array) {
-	return array.reduce((total, nextNum) => {
-    total += nextNum;
-    return total;
-  }, 0);
+	return array.reduce((total, current) => total + current, 0);
 };
 
 const multiply = function(array) {
-  return array.reduce((total, nextNum) => {
-    total *= nextNum;
-    return total; 
-  }, 1);
+  return array.reduce((total, current) => total * current, 1);
 };
 
 const power = function(num, power) {
-  return num ** power;
+  return Math.pow(num, power);
 };
 
 const factorial = function(num) {
@@ -32,7 +26,7 @@ const factorial = function(num) {
     num--;
     result *= num;
   }
-  
+
   return result;
 };
 
