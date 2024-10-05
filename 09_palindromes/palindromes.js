@@ -10,7 +10,7 @@ const palindromes = function (string) {
     if(reversedString.toLowerCase() === cleanedString.toLowerCase()) return true;
 
     return false;
-};  
+};
 
 // Do not edit below this line
 module.exports = palindromes;
